@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tema</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="imagem">Boa Noite</div>
+        <div id="btn">
+            <div id="liga" onclick="liga()"></div>
+            <div id="desliga" onclick="desliga()"></div>
+        </div>
+    </div>
+    
+
+    <script>
+        
+        function liga(){
+            var fundo = window.document.getElementById('container')
+            var fundo2 = window.document.getElementById('btn')
+            var liga = window.document.getElementById('liga')
+            var desliga = window.document.getElementById('desliga')
+            var corpo = window.document.body
+            var txt = window.document.getElementById('imagem')
+            liga.style.display = 'none'
+            desliga.style.display = 'flex'
+            fundo.style.background = 'rgba(255, 255, 0, 0.500)'
+            fundo2.style.background = 'yellow'
+            corpo.style.backgroundImage = 'url(../imagens/dia.jpg)'
+            txt.innerText = ('Bom Dia')
+            txt.style.color = 'orange'
+            txt.style.backgroundImage = 'url(../imagens/passaro.gif)'
+            txt.style.backgroundRepeat = 'no-repeat'
+
+            fundo.style.transition = 'all .5s'
+            fundo2.style.transition = 'all .5s'
+            corpo.style.transition = 'all .5s'
+            txt.style.transition = 'all .5s'
+            
+
+        }
+
+        function desliga(){
+            var fundo = window.document.getElementById('container')
+            var fundo2 = window.document.getElementById('btn')
+            var liga = window.document.getElementById('liga')
+            var desliga = window.document.getElementById('desliga')
+            var corpo = window.document.body
+            var txt = window.document.getElementById('imagem')
+            desliga.style.display = 'none'
+            liga.style.display = 'flex'
+            fundo.style.background = 'rgba(0, 0, 139, 0.500)'
+            fundo2.style.background = 'darkblue'
+            corpo.style.backgroundImage = 'url(../imagens/noite.jpg)'
+            txt.innerText = ('Boa Noite')
+            txt.style.color = 'lightblue'
+            txt.style.backgroundImage = 'url(../imagens/estrela.gif)'
+            txt.style.backgroundRepeat = 'repeat'
+        }
+
+        if (liga == 'none'){
+            var corpo = document.document.body
+            corpo.style.backgroun = 'red'
+
+        }
+    </script>
+</body>
+</html>
